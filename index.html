@@ -238,6 +238,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .neural-network {
@@ -250,14 +253,15 @@
         .neural-row {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
             position: relative;
             justify-content: center;
+            width: 100%;
         }
 
         .node {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             position: relative;
@@ -269,7 +273,7 @@
             position: absolute;
             top: 50%;
             left: 100%;
-            width: 20px;
+            width: 15px;
             height: 2px;
             background: #667eea;
             opacity: 0.6;
@@ -802,6 +806,8 @@
                         <div class="neural-row">
                             <div class="node"></div>
                             <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
                             <div class="row-label">
                                 <i class="fas fa-brain"></i>
                                 <span>Artificial Intelligence</span>
@@ -810,12 +816,16 @@
                         <div class="neural-row">
                             <div class="node"></div>
                             <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
                             <div class="row-label">
                                 <i class="fas fa-robot"></i>
                                 <span>Natural Language Processing</span>
                             </div>
                         </div>
                         <div class="neural-row">
+                            <div class="node"></div>
+                            <div class="node"></div>
                             <div class="node"></div>
                             <div class="node"></div>
                             <div class="row-label">
