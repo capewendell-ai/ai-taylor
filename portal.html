@@ -21,6 +21,7 @@
         .navbar { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 80px; }
         .nav-logo h2 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; font-size: 1.8rem; }
+        .logo-image { height: 50px; width: auto; max-width: 200px; object-fit: contain; }
         .nav-menu { display: flex; list-style: none; gap: 40px; align-items: center; }
         .nav-link { text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease; position: relative; }
         .nav-link:hover, .nav-link.active { color: #667eea; }
@@ -143,7 +144,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>AI Taylor</h2>
+                <img src="logo.png" alt="AI Tailor" class="logo-image">
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
