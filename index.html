@@ -241,15 +241,22 @@
         }
 
         .neural-network {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
             margin-bottom: 40px;
         }
 
+        .neural-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
         .node {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             position: relative;
@@ -261,14 +268,32 @@
             position: absolute;
             top: 50%;
             left: 100%;
-            width: 40px;
+            width: 20px;
             height: 2px;
             background: #667eea;
             opacity: 0.6;
         }
 
-        .node:nth-child(3n)::before {
+        .node:last-child::before {
             display: none;
+        }
+
+        .row-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            color: #333;
+            margin-left: 20px;
+        }
+
+        .row-label i {
+            color: #667eea;
+            font-size: 1.2rem;
         }
 
         @keyframes pulse {
@@ -276,51 +301,6 @@
             50% { transform: scale(1.1); opacity: 1; }
         }
 
-        .floating-elements {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .floating-card {
-            position: absolute;
-            background: white;
-            padding: 15px 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .floating-card:nth-child(1) {
-            top: 20%;
-            right: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-card:nth-child(2) {
-            bottom: 30%;
-            left: 10%;
-            animation-delay: 1s;
-        }
-
-        .floating-card:nth-child(3) {
-            top: 60%;
-            right: 20%;
-            animation-delay: 2s;
-        }
-
-        .floating-card i {
-            color: #667eea;
-            font-size: 1.2rem;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
 
         .services-preview {
             padding: 100px 0;
@@ -794,25 +774,29 @@
             <div class="hero-image">
                 <div class="ai-visualization">
                     <div class="neural-network">
-                        <div class="node"></div>
-                        <div class="node"></div>
-                        <div class="node"></div>
-                        <div class="node"></div>
-                        <div class="node"></div>
-                        <div class="node"></div>
-                    </div>
-                    <div class="floating-elements">
-                        <div class="floating-card">
-                            <i class="fas fa-brain"></i>
-                            <span>Artificial Intelligence</span>
+                        <div class="neural-row">
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="row-label">
+                                <i class="fas fa-brain"></i>
+                                <span>Artificial Intelligence</span>
+                            </div>
                         </div>
-                        <div class="floating-card">
-                            <i class="fas fa-robot"></i>
-                            <span>Natural Language Processing</span>
+                        <div class="neural-row">
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="row-label">
+                                <i class="fas fa-robot"></i>
+                                <span>Natural Language Processing</span>
+                            </div>
                         </div>
-                        <div class="floating-card">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Process Automation</span>
+                        <div class="neural-row">
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="row-label">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Process Automation</span>
+                            </div>
                         </div>
                     </div>
                 </div>
