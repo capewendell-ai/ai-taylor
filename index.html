@@ -252,6 +252,7 @@
             align-items: center;
             gap: 20px;
             position: relative;
+            justify-content: center;
         }
 
         .node {
@@ -279,21 +280,45 @@
         }
 
         .row-label {
+            position: absolute;
             display: flex;
             align-items: center;
             gap: 10px;
             background: white;
-            padding: 12px 20px;
-            border-radius: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             font-weight: 600;
             color: #333;
-            margin-left: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .neural-row:nth-child(1) .row-label {
+            top: -20px;
+            right: 20px;
+            animation-delay: 0s;
+        }
+
+        .neural-row:nth-child(2) .row-label {
+            top: -20px;
+            left: 20px;
+            animation-delay: 1s;
+        }
+
+        .neural-row:nth-child(3) .row-label {
+            top: -20px;
+            right: 20px;
+            animation-delay: 2s;
         }
 
         .row-label i {
             color: #667eea;
             font-size: 1.2rem;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         @keyframes pulse {
